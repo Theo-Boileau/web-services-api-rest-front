@@ -27,6 +27,9 @@ export class ObjectService {
         .subscribe((object: any) => {
           console.log(object);
           resolve(object);
+        }, (err) => {
+          console.log(err);
+          reject();
         })
     })
   }
