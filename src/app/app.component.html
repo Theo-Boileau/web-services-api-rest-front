@@ -1,8 +1,26 @@
 <div>Hello World !</div>
+
+<div>client: {{clientId}}</div>
+
+<div *ngIf="email">
+  <div>email: {{email}}</div>
+  <div>Nom: {{name}}</div>
+
+  <button (click)="logout()">LOGOUT</button>
+</div>
+
 <div id="g_id_onload"
      data-client_id="935536422250-nnfrgfcuoe3pmd3mttmam41mcbhjeq1f.apps.googleusercontent.com"
      data-callback="handleCredentialResponse"
      data-auto_prompt="false">
 </div>
 <div class="g_id_signin" data-type="standard">
+</div>
+
+<div>
+  <button (click)="loadObjects()">LOAD OBJECTS</button>
+
+  <ul>
+    <li *ngFor="let item of objects">{{item.name}} - {{item.weight}}kg</li>
+  </ul>
 </div>
